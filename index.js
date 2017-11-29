@@ -4,5 +4,5 @@ class Driver {
 //check to see how id is added to object with out taking ID
     this.name = name;
   }
-  store.drivers.push(this)
+  store.drivers.push(this);
 }
