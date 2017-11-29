@@ -41,4 +41,4 @@ class Passenger {
 
 let tripId = 0
 
-class Trip
+class Trip {}
