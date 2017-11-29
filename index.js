@@ -6,8 +6,6 @@ class Driver {
   constructor (name, passenger, trip) {
     this.id = ++driverId;
     this.name = name;
-    this.passenger = passenger;
-
     store.drivers.push(this);
   }
   trips(){
@@ -16,8 +14,8 @@ class Driver {
     })
   }
   passengers(){
-    return store.passengers.filter(passenger => {
-      return passenger.driverId === this.id
+    return this.trips().map((trip => {
+      return trip.passenger()
     })
   }
 }
