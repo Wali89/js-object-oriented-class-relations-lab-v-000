@@ -7,12 +7,7 @@ class Driver {
     this.id = ++driverId;
     this.name = name;
     this.passenger = passenger;
-    if(passenger){
-      this.passengerId = passenger.id;
-    }
-    if(trip){
-      this.tripId = trip.id;
-    }
+  
     store.drivers.push(this);
   }
   trips(){
