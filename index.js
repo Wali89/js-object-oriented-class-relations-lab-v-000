@@ -9,12 +9,12 @@ class Driver {
     store.drivers.push(this);
   }
   trips(){
-    return store.trips.filter(trip => {
+    return store.trips.filter((trip) => {
       return trip.driverId === this.id
     })
   }
   passengers(){
-    return this.trips().map((trip => {
+    return this.trips().map((trip) => {
       return trip.passenger()
     })
   }
@@ -24,19 +24,19 @@ class Driver {
 let passengerId = 0
 
 class Passenger {
-  constructor (name, driver, trip) {
+  constructor (name) {
   this.id = ++passengerId;
   this.name = name;
   this.driverId = [];
   store.passengers.push(this);
   }
   trips(){
-    return store.trips.filter(trip => {
+    return store.trips.filter((trip) => {
       return trip.passengerId === this.id
     })
   }
   drivers(){
-    return store.drivers.filter(driver => {
+    return this.trips().map((driver) => {
       return driver.passengerId === this.id
     })
   }
