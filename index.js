@@ -9,7 +9,9 @@ class Driver {
     store.drivers.push(this);
   }
   trips(){
-    return store.trips.filter
+    return store.trips.filter(trip => {
+      return trip.id === this.id
+    })
   }
 }
 
